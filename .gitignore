@@ -1,7 +1,0 @@
-﻿################################################################################
-# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
-################################################################################
-
-/XLAnimationModifier/XLAnimationModifier/obj/Debug
-/XLAnimationModifier/.vs/XLAnimationModifier/v16
-/XLAnimationModifier/XLAnimationModifier/bin/Debug
