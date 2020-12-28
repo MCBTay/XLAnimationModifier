@@ -9,9 +9,10 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>XLAnimationModifier</RootNamespace>
     <AssemblyName>XLAnimationModifier</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -71,7 +72,25 @@
     <Compile Include="UserInterface.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Info.json" />
+    <None Include="Info.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>if "$(ConfigurationName)"=="Debug" ( 
+del /Q /F "F:\Steam\steamapps\common\Skater XL\Mods\XLGearModifier\"
+copy /Y "$(TargetDir)XLAnimationModifier.dll" "F:\Steam\steamapps\common\Skater XL\Mods\XLAnimationModifier\XLAnimationModifier.dll"
+copy /Y "$(TargetDir)XLAnimationModifier.pdb" "F:\Steam\steamapps\common\Skater XL\Mods\XLGearModifier\XLAnimationModifier.pdb"
+copy /Y "$(TargetDir)Info.json" "F:\Steam\steamapps\common\Skater XL\Mods\XLAnimationModifier\Info.json"
+)
+
+if "$(ConfigurationName)"=="Release" (
+mkdir $(TargetDir)XLAnimationModifier
+copy /Y "$(TargetDir)XLAnimationModifier.dll" "$(TargetDir)XLAnimationModifier\XLAnimationModifier.dll"
+copy /Y "$(TargetDir)Info.json" "$(TargetDir)XLAnimationModifier\Info.json"
+
+powershell Compress-Archive -Path '$(TargetDir)XLAnimationModifier' -DestinationPath '$(TargetDir)XLAnimationModifier-0-0-1.zip' -Force
+)</PostBuildEvent>
+  </PropertyGroup>
 </Project>
