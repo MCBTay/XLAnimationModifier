@@ -81,9 +81,9 @@
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>if "$(ConfigurationName)"=="Debug" ( 
-del /Q /F "F:\Steam\steamapps\common\Skater XL\Mods\XLGearModifier\"
+del /Q /F "F:\Steam\steamapps\common\Skater XL\Mods\XLAnimationModifier\"
 copy /Y "$(TargetDir)XLAnimationModifier.dll" "F:\Steam\steamapps\common\Skater XL\Mods\XLAnimationModifier\XLAnimationModifier.dll"
-copy /Y "$(TargetDir)XLAnimationModifier.pdb" "F:\Steam\steamapps\common\Skater XL\Mods\XLGearModifier\XLAnimationModifier.pdb"
+copy /Y "$(TargetDir)XLAnimationModifier.pdb" "F:\Steam\steamapps\common\Skater XL\Mods\XLAnimationModifier\XLAnimationModifier.pdb"
 copy /Y "$(TargetDir)Info.json" "F:\Steam\steamapps\common\Skater XL\Mods\XLAnimationModifier\Info.json"
 )
 
