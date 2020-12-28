@@ -31,7 +31,7 @@ namespace XLAnimationModifier
 				stretchWidth = false
 			};
 
-			GUILayout.Window(823, new Rect(40, 40, 200, 50), DrawWindow, "XL Gear Modifier", style);
+			GUILayout.Window(823, new Rect(40, 40, 200, 50), DrawWindow, "XL Animation Modifier", style);
 		}
 
 		private void DrawWindow(int windowID)
