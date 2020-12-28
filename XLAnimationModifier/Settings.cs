@@ -1,12 +1,29 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using UnityModManagerNet;
 
 namespace XLAnimationModifier
 {
-	class Settings
+	[Serializable]
+	public class Settings : UnityModManager.ModSettings
 	{
+		public bool DisableRevertAnimation { get; set; }
+
+		public static Settings Instance { get; set; }
+		public static UnityModManager.ModEntry ModEntry;
+
+		public Settings() : base()
+		{
+
+		}
+
+		public override void Save(UnityModManager.ModEntry modEntry)
+		{
+			Save(this, modEntry);
+		}
+
+		public void Save()
+		{
+			Save(ModEntry);
+		}
 	}
 }
