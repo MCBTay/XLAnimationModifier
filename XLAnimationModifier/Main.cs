@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace XLAnimationModifier
 {
-    public class Class1
-    {
-    }
+	class Main
+	{
+	}
 }
