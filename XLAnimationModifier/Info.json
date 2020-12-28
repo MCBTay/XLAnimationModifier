@@ -1,0 +1,12 @@
+{
+  "Id": "XLAnimationModifier",
+  "DisplayName": "XL Animation Modifier",
+  "Author": "mcbtay & tave",
+  "Version": "0.0.1",
+  "ManagerVersion": "0.22.5.0",
+  "Requirements": [],
+  "AssemblyName": "XLAnimationModifier.dll",
+  "EntryMethod": "XLAnimationModifier.Main.Load",
+  "HomePage": "https://github.com/MCBTay/XLAnimationModifier",
+  "Repository": ""
+}

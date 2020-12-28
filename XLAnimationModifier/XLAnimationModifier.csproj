@@ -67,5 +67,8 @@
     <Compile Include="Settings.cs" />
     <Compile Include="UserInterface.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Info.json" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
