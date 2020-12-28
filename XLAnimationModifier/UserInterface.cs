@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace XLGearModifier
+namespace XLAnimationModifier
 {
 	public class UserInterface : MonoBehaviour
 	{
@@ -45,13 +45,13 @@ namespace XLGearModifier
 		private void CreateToggleButton()
 		{
 			GUIStyle style = new GUIStyle(GUI.skin.button) { fontSize = 14, fixedHeight = 25 };
-			style.normal.textColor = style.hover.textColor = style.active.textColor = Settings.Instance.AllowMultipleGearItemsPerSlot ? Color.green : Color.white;
+			style.normal.textColor = style.hover.textColor = style.active.textColor = Settings.Instance.DisableRevertAnimation ? Color.green : Color.white;
 
 			GUILayout.BeginHorizontal();
 
-			if (GUILayout.Button(new GUIContent($"Allow Multiple Gear Items Per Slot: <b>{(Settings.Instance.AllowMultipleGearItemsPerSlot ? "Yes" : "No")}</b>"), style))
+			if (GUILayout.Button(new GUIContent($"Disable Revert Animation: <b>{(Settings.Instance.DisableRevertAnimation ? "Yes" : "No")}</b>"), style))
 			{
-				Settings.Instance.AllowMultipleGearItemsPerSlot = !Settings.Instance.AllowMultipleGearItemsPerSlot;
+				Settings.Instance.DisableRevertAnimation = !Settings.Instance.DisableRevertAnimation;
 				Settings.Instance.Save();
 
 				PlayerController.Instance.characterCustomizer.LoadLastPlayer();

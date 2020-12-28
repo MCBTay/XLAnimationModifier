@@ -51,6 +51,9 @@
     <Reference Include="UnityEngine.CoreModule">
       <HintPath>References\UnityEngine.CoreModule.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>References\UnityEngine.IMGUIModule.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.InputLegacyModule">
       <HintPath>References\UnityEngine.InputLegacyModule.dll</HintPath>
     </Reference>
