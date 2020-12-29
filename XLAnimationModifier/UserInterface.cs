@@ -11,7 +11,7 @@ namespace XLAnimationModifier
 
 		private void Update()
 		{
-			if (!Input.GetKeyDown(KeyCode.M)) return;
+			if (!Input.GetKeyDown(KeyCode.Q)) return;
 
 			UIIsOpen = !UIIsOpen;
 			Cursor.visible = UIIsOpen;
