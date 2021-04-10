@@ -92,7 +92,7 @@ mkdir $(TargetDir)XLAnimationModifier
 copy /Y "$(TargetDir)XLAnimationModifier.dll" "$(TargetDir)XLAnimationModifier\XLAnimationModifier.dll"
 copy /Y "$(TargetDir)Info.json" "$(TargetDir)XLAnimationModifier\Info.json"
 
-powershell Compress-Archive -Path '$(TargetDir)XLAnimationModifier' -DestinationPath '$(TargetDir)XLAnimationModifier-0-0-1.zip' -Force
+powershell Compress-Archive -Path '$(TargetDir)XLAnimationModifier' -DestinationPath '$(TargetDir)XLAnimationModifier-0-0-2.zip' -Force
 )</PostBuildEvent>
   </PropertyGroup>
 </Project>
